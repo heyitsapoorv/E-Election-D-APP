@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="src/index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> --> -->
+    <title>E-Voting DAPP</title>
+  </head>
+  <body>
+    <div id="popup" class="hiddenmodal">
+      <img src="https://www.yeselections.com/hubfs/diy%20voting.jpg" alt="" width= "1550px"
+      height="1080px">
+      <div class="modal-footer">
+        <button type="button"  id="close" class ="btn" data-dismiss="modal">Continue</button>
+      </div>
+    </div>
+    <script>
+
+      window.onload = function () {
+        /* Cache the popup. */
+        var popup = document.getElementById("popup");
+
+        /* Show the popup. */
+        popup.classList.remove("hidden");
+        /* Fade the popup in */
+
+        setTimeout(()=>popup.classList.add("fade-in"));
+        /* Close the popup when a city is selected. */
+
+        document.getElementById("close").onclick = function () {
+
+           /* Fade the popup out */
+           popup.classList.remove("fade-in");
+
+           /* Hide the popup. */
+
+           setTimeout(()=>popup.classList.add("hidden"), 300);
+
+        };
+
+      };
+
+      </script>
+
+    <div id="root" ></div>
+
+    <div class="footer">
+    <!-- <p>Made with &#x1F5A4; in India</p> -->
+    <p class='footer-description' style="text-align:center">&#169;Developed by Lakshit, Apoorv and Mayank </p>
+    </div>
+  </body>
+</html>
