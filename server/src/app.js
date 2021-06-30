@@ -64,7 +64,7 @@ app.post('/api/adminLogin', async function(req, res) {
             res.send(true);
         }
     });
-    
+
 });
 
 
